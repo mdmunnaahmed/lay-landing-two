@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  // font families
+  --ff-heading: "Montserrat", sans-serif;
+  --ff-body: "Inter", sans-serif;
+  --ff-other: "Lato", sans-serif;
+
+  // line heights
+  --lh-heading: 1;
+  --lh-body: 1.7;
+
+  // font sizes
+  --fs-body: 16px;
+  --fs-heading-one: 60px;
+  --fs-heading-two: 43px;
+  --fs-heading-three: 37px;
+  --fs-heading-four: 24px;
+  --fs-heading-five: 20px;
+  --fs-heading-six: 18px;
+
+  // colors
+  --c-heading: #333333;
+  --c-body: #606065;
+
+  --c-base: #3fad0c;
+  --c-primary: #0a0c25;
+}
+
+// media query mixin
+@mixin breakpoint($point) {
+  @if $point==xs {
+    @media (min-width: 320px) {
+      @content;
+    }
+  } @else if $point==max-xs {
+    @media (max-width: 450px) {
+      @content;
+    }
+  }
+  @if $point==sm {
+    @media (min-width: 576px) {
+      @content;
+    }
+  } @else if $point==max-sm {
+    @media (max-width: 575px) {
+      @content;
+    }
+  } @else if $point==md {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $point==max-md {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $point==lg {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $point==max-lg {
+    @media (max-width: 991px) {
+      @content;
+    }
+  } @else if $point==xl {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if $point==max-xl {
+    @media (max-width: 1199px) {
+      @content;
+    }
+  } @else if $point==xxl {
+    @media (min-width: 1400px) {
+      @content;
+    }
+  } @else if $point==max-xxl {
+    @media (max-width: 1399px) {
+      @content;
+    }
+  }
+}
+@mixin min($value) {
+  @media (min-width: $value) {
+    @content;
+  }
+}
+@mixin max($value) {
+  @media (max-width: $value) {
+    @content;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+  color: var(--c-body);
+  line-height: var(--lh-body);
+}
+a {
+  text-decoration: none;
+  color: var(--c-body);
+}
+span,
+sub,
+sup,
+a {
+  display: inline-block;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: var(--lh-heading);
+  font-family: var(--ff-heading);
+  color: var(--c-heading);
+}
+h1 > a,
+h2 > a,
+h3 > a,
+h4 > a,
+h5 > a,
+h6 > a {
+  color: var(--c-heading);
+}
+h1 {
+  font-size: var(--fs-heading-one);
+}
+h2 {
+  font-size: var(--fs-heading-two);
+}
+h3 {
+  font-size: var(--fs-heading-three);
+}
+h4 {
+  font-size: var(--fs-heading-four);
+}
+h5 {
+  font-size: var(--fs-heading-five);
+}
+h6 {
+  font-size: var(--fs-heading-six);
+}
+
+@include breakpoint(max-lg) {
+  :root {
+    --fs-heading-one: 40px;
+    --fs-heading-two: 36px;
+    --fs-heading-three: 28px;
+    --fs-heading-four: 22px;
+    --fs-heading-five: 20px;
+    --fs-heading-six: 16px;
+  }
+}
+@include breakpoint(max-sm) {
+  :root {
+    --fs-heading-one: 36px;
+    --fs-heading-two: 30px;
+    --fs-heading-three: 26px;
+    --fs-heading-four: 20px;
+    --fs-heading-five: 18px;
+    --fs-heading-six: 16px;
+  }
+}
