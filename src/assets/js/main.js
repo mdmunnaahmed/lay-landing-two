@@ -1,29 +1,53 @@
 "user strict";
 
 // slider 
-let slideIndex = 1;
+let slideIndex1 = 1;
+let slideIndex2 = 1;
 
-function changeSlide(n) {
-  showSlide(slideIndex += n);
+// Function to change slides
+function changeSlide(sliderNum, n) {
+  if (sliderNum === 1) {
+    showSlide(1, slideIndex1 += n);
+  } else {
+    showSlide(2, slideIndex2 += n);
+  }
 }
 
-function setCurrentSlide(n) {
-  showSlide(slideIndex = n);
+// Function to set the current slide
+function setCurrentSlide(sliderNum, n) {
+  if (sliderNum === 1) {
+    showSlide(1, slideIndex1 = n);
+  } else {
+    showSlide(2, slideIndex2 = n);
+  }
 }
 
-function showSlide(n) {
-  let slides = document.querySelectorAll(".slides");
-  let thumbnails = document.querySelectorAll(".thumbnail");
-  
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
+// Function to show slides
+function showSlide(sliderNum, n) {
+  let slides, thumbnails;
 
-  slides.forEach(slide => slide.classList.remove("active"));
-  thumbnails.forEach(thumb => thumb.classList.remove("active-thumbnail"));
+  if (sliderNum === 1) {
+    slides = document.querySelectorAll('.slider-1 .slides');
+    thumbnails = document.querySelectorAll('.slider-1 .thumbnail');
+  } else {
+    slides = document.querySelectorAll('.slider-2 .slides');
+    thumbnails = document.querySelectorAll('.slider-2 .thumbnail');
+  }
 
-  slides[slideIndex - 1].classList.add("active");
-  thumbnails[slideIndex - 1].classList.add("active-thumbnail");
+  if (n > slides.length) { n = 1; }
+  if (n < 1) { n = slides.length; }
+
+  slides.forEach(slide => slide.classList.remove('active'));
+  thumbnails.forEach(thumb => thumb.classList.remove('active-thumbnail'));
+
+  slides[n - 1].classList.add('active');
+  // thumbnails[n - 1].classList.add('active-thumbnail');
 }
+
+// Initialize the sliders
+showSlide(1, slideIndex1);
+showSlide(2, slideIndex2);
+
 
 
 // time count down

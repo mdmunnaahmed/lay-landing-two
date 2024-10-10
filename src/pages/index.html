@@ -258,30 +258,26 @@
                 <h2>Introducing BarkGuard <span>The Next-Gen Solution for Excessive Barking</span></h2>
 
                 <div class="slider-thumb-mobile">
-                  <div class="slider-container">
+                  <div class="slider-container slider-1">
                     <!-- Slides -->
                     <div class="slides active">
                       <img src="assets/images/slider-img/slider1.webp" alt="Image 1">
                     </div>
-                  
                     <div class="slides">
                       <img src="assets/images/slider-img/slider2.webp" alt="Image 2">
                     </div>
-                  
                     <div class="slides">
                       <img src="assets/images/slider-img/slider3.webp" alt="Image 3">
                     </div>
-                  
                     <!-- Previous and Next buttons -->
-                    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-                    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+                    <a class="prev" onclick="changeSlide(1, -1)">&#10094;</a>
+                    <a class="next" onclick="changeSlide(1, 1)">&#10095;</a>
                   </div>
-                  
                   <!-- Thumbnails -->
                   <div class="thumbnail-container">
-                    <img class="thumbnail active-thumbnail" src="assets/images/slider-img/slider1.webp" alt="Image 1 Thumbnail" onclick="setCurrentSlide(1)">
-                    <img class="thumbnail" src="assets/images/slider-img/slider2.webp" alt="Image 2 Thumbnail" onclick="setCurrentSlide(2)">
-                    <img class="thumbnail" src="assets/images/slider-img/slider3.webp" alt="Image 3 Thumbnail" onclick="setCurrentSlide(3)">
+                    <img class="thumbnail active-thumbnail" src="assets/images/slider-img/slider1.webp" alt="Image 1 Thumbnail" onclick="setCurrentSlide(1, 1)">
+                    <img class="thumbnail" src="assets/images/slider-img/slider2.webp" alt="Image 2 Thumbnail" onclick="setCurrentSlide(1, 2)">
+                    <img class="thumbnail" src="assets/images/slider-img/slider3.webp" alt="Image 3 Thumbnail" onclick="setCurrentSlide(1, 3)">
                   </div>
                 </div>
 
@@ -306,34 +302,30 @@
                 </div>
 
               </div>
-
               <div class="slider-thumb">
-                <div class="slider-container">
+                <div class="slider-container slider-2">
                   <!-- Slides -->
                   <div class="slides active">
                     <img src="assets/images/slider-img/slider1.webp" alt="Image 1">
                   </div>
-                
                   <div class="slides">
                     <img src="assets/images/slider-img/slider2.webp" alt="Image 2">
                   </div>
-                
                   <div class="slides">
                     <img src="assets/images/slider-img/slider3.webp" alt="Image 3">
                   </div>
-                
                   <!-- Previous and Next buttons -->
-                  <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-                  <a class="next" onclick="changeSlide(1)">&#10095;</a>
+                  <a class="prev" onclick="changeSlide(2, -1)">&#10094;</a>
+                  <a class="next" onclick="changeSlide(2, 1)">&#10095;</a>
                 </div>
-                
                 <!-- Thumbnails -->
                 <div class="thumbnail-container">
-                  <img class="thumbnail active-thumbnail" src="assets/images/slider-img/slider1.webp" alt="Image 1 Thumbnail" onclick="setCurrentSlide(1)">
-                  <img class="thumbnail" src="assets/images/slider-img/slider2.webp" alt="Image 2 Thumbnail" onclick="setCurrentSlide(2)">
-                  <img class="thumbnail" src="assets/images/slider-img/slider3.webp" alt="Image 3 Thumbnail" onclick="setCurrentSlide(3)">
+                  <img class="thumbnail active-thumbnail" src="assets/images/slider-img/slider1.webp" alt="Image 1 Thumbnail" onclick="setCurrentSlide(2, 1)">
+                  <img class="thumbnail" src="assets/images/slider-img/slider2.webp" alt="Image 2 Thumbnail" onclick="setCurrentSlide(2, 2)">
+                  <img class="thumbnail" src="assets/images/slider-img/slider3.webp" alt="Image 3 Thumbnail" onclick="setCurrentSlide(2, 3)">
                 </div>
               </div>
+
             </div>
             <div class="card-area">
               <div class="card-top__content">
@@ -498,27 +490,29 @@
             <div class="special-wrapper">
               <div class="special-content">
                 <div class="special-content__inner">
-                  <h2>Special Offer On Now</h2>
-                  <div class="discount-text2"><strong>50% discount</strong> on BarkGuard for first-time buyers</div>
-                  <div class="countdown-wrapper">
-                    <div class="text">Limited Time Offer!</div>
-                    <div class="countdown">
-                      <div>
-                        <div id="hours">00</div>
-                        <span>Hours</span>
-                      </div>
-                      <div>
-                        <div id="minutes">00</div>
-                        <span>Minutes</span>
-                      </div>
-                      <div>
-                        <div id="seconds">00</div>
-                        <span>Seconds</span>
+                  <div class="mobile-special-wrapper">
+                    <h2>Special Offer On Now</h2>
+                    <div class="discount-text2"><strong>50% discount</strong> on BarkGuard for first-time buyers</div>
+                    <div class="countdown-wrapper">
+                      <div class="text">Limited Time Offer!</div>
+                      <div class="countdown">
+                        <div>
+                          <div id="hours">00</div>
+                          <span>Hours</span>
+                        </div>
+                        <div>
+                          <div id="minutes">00</div>
+                          <span>Minutes</span>
+                        </div>
+                        <div>
+                          <div id="seconds">00</div>
+                          <span>Seconds</span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="mobile-special-thumb">
-                    <img src="assets/images/thumb/special-thumb.webp" alt="thumb">
+                    <div class="mobile-special-thumb">
+                      <img src="assets/images/thumb/special-thumb.webp" alt="thumb">
+                    </div>
                   </div>
                   <div class="special-limited">Special LIMITED TIME Offer: <br> <span>Pay Only $59.99</span></div>
                   <ul class="offer-list">

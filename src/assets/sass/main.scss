@@ -1325,7 +1325,7 @@ footer {
   .slider-thumb-mobile,
   .mobile-feature-thumb,
   .mobile-special-thumb {
-    display: none;
+    display: none !important;
   }
   .feature-item { 
     img {
@@ -1335,6 +1335,52 @@ footer {
 }
 
 @include breakpoint(max-md) {
+  .mobile-special-wrapper {
+    background-color: #fff;
+    padding-inline: 15px;
+    padding-top: 40px;
+  }
+  .special-content__inner {
+    padding-inline: 0px;
+    padding-top: 0px;
+    .cmn-content-wrapper {
+      padding-inline: 15px;
+    }
+    .button.big {
+      font-size: 20px;
+      font-family: var(--ff-other);
+      padding-inline: 15px;
+      div {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+      }
+    }
+    .special-limited {
+      font-size: 20px;
+      padding-top: 30px;
+      span {
+        color: #40DC02;
+      }
+    }
+    .offer-list {
+      padding-inline: 30px;
+    }
+  }
+  .special-content h2 {
+    font-size: 31px;
+  }
+  .special-content .discount-text2 {
+    line-height: 1.2;
+  }
+  .special-content__inner .text {
+    font-size: 23px;
+}
+  .special-content__inner .countdown-wrapper {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-bottom: 10px;
+}
   .mobile-special-thumb {
     img {
       width: 100%;
@@ -1454,7 +1500,7 @@ footer {
     font-size: 18px;
   }
   .how-section {
-    padding-block: 40px;
+    padding-block: 30px;
   }
   .how-section .how-title {
     font-size: 26px;
