@@ -26,6 +26,29 @@ function showSlide(n) {
 }
 
 
+// time count down
+function startCountdown(duration) {
+  let timer = duration, hours, minutes, seconds;
+  setInterval(function() {
+    hours = Math.floor((timer / 3600) % 24);
+    minutes = Math.floor((timer / 60) % 60);
+    seconds = Math.floor(timer % 60);
+
+    document.getElementById('hours').textContent = hours < 10 ? "0" + hours : hours;
+    document.getElementById('minutes').textContent = minutes < 10 ? "0" + minutes : minutes;
+    document.getElementById('seconds').textContent = seconds < 10 ? "0" + seconds : seconds;
+
+    if (--timer < 0) {
+      timer = duration;
+    }
+  }, 1000);
+}
+
+// Set countdown duration (e.g., 12 hours = 43200 seconds)
+const countdownDuration = 12 * 60 * 60; // Example: 12 hours
+startCountdown(countdownDuration);
+
+
 // faq add class remove class
 document.addEventListener("DOMContentLoaded", function () {
   var faqTitles = document.querySelectorAll(".faq-title");
@@ -42,8 +65,8 @@ document.addEventListener("DOMContentLoaded", function () {
       } else {
         // Close other open items
         document.querySelectorAll(".faq-item.active").forEach(function (activeItem) {
-        //   var activeContent = activeItem.querySelector(".faq-content");
-        //   activeContent.classList = "open";
+          var activeContent = activeItem.querySelector(".faq-content");
+          activeContent.style.height = "0";
           activeItem.classList.remove("active");
         });
 
